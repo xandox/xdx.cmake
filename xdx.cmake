@@ -8,6 +8,10 @@ macro(_xdx_status string_message)
     message(STATUS "=XDX= ${string_message}")
 endmacro()
 
+macro(_xdx_fatal string_message)
+    message(FATAL_ERROR "!XDX! ${string_message}")
+endmacro()
+
 set(_XDX_CMAKE_18e05eed_78ad_4a50_bf0b_6b3eb2d3b6c9 1)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
