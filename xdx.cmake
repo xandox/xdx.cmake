@@ -10,6 +10,8 @@ endmacro()
 
 set(_XDX_CMAKE_18e05eed_78ad_4a50_bf0b_6b3eb2d3b6c9 1)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include(${CMAKE_CURRENT_LIST_DIR}/xdx/xdx_project.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/xdx/xdx_settings.cmake)
 
