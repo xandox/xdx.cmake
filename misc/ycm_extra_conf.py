@@ -19,6 +19,7 @@ flags = [
         # For a C project, you would set this to 'c' instead of 'c++'.
         '-x',
         'c++',
+        '-std=c++17',
         ]
 
 build_folders = [
