@@ -4,6 +4,8 @@ if (_XDX_CMAKE_18e05eed_78ad_4a50_bf0b_6b3eb2d3b6c9)
     return()
 endif()
 
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 macro(_xdx_status string_message)
     message(STATUS "=XDX= ${string_message}")
 endmacro()
