@@ -1,0 +1,17 @@
+# Distributed under the OSI-approved MIT License.  See accompanying
+# file LICENSE or https://github.com/Crascit/DownloadProject for details.
+
+cmake_minimum_required(VERSION 2.8.2)
+
+project(${_xdx_rr_PROJ}-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(${_xdx_rr_PROJ}-download
+                    ${_xdx_rr_UNPARSED_ARGUMENTS}
+                    SOURCE_DIR          "${_xdx_rr_SOURCE_DIR}"
+                    BINARY_DIR          "${_xdx_rr_BUILD_DIR}"
+                    CONFIGURE_COMMAND   ""
+                    BUILD_COMMAND       ""
+                    INSTALL_COMMAND     ""
+                    TEST_COMMAND        ""
+)
