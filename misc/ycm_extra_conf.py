@@ -55,13 +55,21 @@ def IsSourceFile(filename):
     return ext in SOURCE_EXTENSIONS
 
 
-def GetSrcDirForInclude(filename):
+def GetCppDirForInclude(filename, dirname):
     while filename != DirectoryOfThisScript():
         filename = os.path.dirname(filename)
-        srcdir = os.path.join(filename, "src")
+        srcdir = os.path.join(filename, dirname)
         if os.path.exists(srcdir):
             return srcdir
     return None
+
+
+def GetSrcDirForInclude(filename):
+    return GetCppDirForInclude(filename, "src")
+
+
+def GetTestsDirForInclude(filename):
+    return GetCppDirForInclude(filename, "tests")
 
 
 def TryFilesInFolder(folder, check):
@@ -92,6 +100,9 @@ def GetFlagsForSourceForInclude(filename):
         return ci
 
     srcdir = GetSrcDirForInclude(filename)
+    if srcdir is None:
+        srcdir = GetTestsDirForInclude(filename)
+
     if srcdir is None:
         print("source dir not found")
         return None
