@@ -29,6 +29,10 @@ include(${_xdx_root_dir}/xdx/xdx_settings.cmake)
 include(${_xdx_root_dir}/xdx/xdx_remote_repo.cmake)
 include(${_xdx_root_dir}/xdx/xdx_deps.cmake)
 
+if (EXISTS ${CMAKE_SOURCES_DIR}/cmake/xdx_project_extend.cmake)
+    include(${CMAKE_SOURCES_DIR}/cmake/xdx_project_extend.cmake)
+endif()
+
 if (XDX_ENABLE_TESTING)
     include(GoogleTest)
     find_package(GTest)

@@ -65,4 +65,8 @@ macro(xdx_remote_repo)
 
     add_subdirectory(${_xdx_rr_SOURCE_DIR})
 
+    if (EXISTS ${_xdx_rr_SOURCE_DIR}/xdx_source_type.cmake)
+        include(${_xdx_rr_SOURCE_DIR}/xdx_source_type.cmake)
+    endif()
+
 endmacro()
