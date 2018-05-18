@@ -223,7 +223,7 @@ macro(__xdx_add_interface_target)
 
         unset(_xdx_interface_dummy_content)
         foreach(_header ${_xdx_project_HEADERS})
-            set(_xdx_interface_dummy_content "${_xdx_interface_dummy_content}#include <${_xdx_project_INCLUDE_SUFFIX}/${_header}>\n")
+            set(_xdx_interface_dummy_content "${_xdx_interface_dummy_content}#include <${_header}>\n")
         endforeach()
 
         set(_xdx_project_SOURCES ${CMAKE_CURRENT_BINARY_DIR}/${_xdx_project_NAME}.cpp)
